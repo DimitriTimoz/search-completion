@@ -62,6 +62,6 @@ pub fn hub_load_safetensors(
         .collect::<candle::Result<Vec<_>>>()?;
     println!("safetensors_files: {:?}", safetensors_files);
     let device = candle::Device::Cpu;
-    let a = candle::safetensors::load(safetensors_files.first().unwrap(), &device)?;
+    
     Ok(safetensors_files)
 }
